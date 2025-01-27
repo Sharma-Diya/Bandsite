@@ -1,0 +1,22 @@
+@use "../partials/variable" as *;
+
+// $tablet-breakpoint: 768px;
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+// $desktop-breakpoint: 1024px;
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+@mixin font($weight) {
+  font-family: Nunito Sans;
+  font-weight: $weight;
+}
+@mixin flex($direction){
+  display: flex;
+  flex-direction: $direction;
+}
