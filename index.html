@@ -4,38 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="header-nav">
-            <a href="./index.html"><img class="header-nav__logo" src="./assets/logo/Logo-bandsite.svg">
-            </a>
-            <div class="header-nav__list">
-                <a class="header-nav__link" href="#">Biography</a>
-                <a class="header-nav__link" href="./pages/shows.html">Shows</a>
-            </div>
-        </div>
+        <nav class="header__nav">
+            <a href="/index.html"><img class="header__nav-logo" src="../assets/logo/Logo-bandsite.svg"></a>
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link header__nav-link--active " href="../index.html">Biography</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="../pages/shows.html">Shows</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="hero-image">
-        <h2 class="hero-image__text">The Bees Knees</h2>
+    <section class="hero">
+        <h2 class="hero__text">The Bees Knees</h2>
     </section>
 
-    <main class="about-section">
-        <h2 class="about-section__head">About the Musicians</h2>
-        <img class="about-section__img" src="./assets/images/band.jpg">
-        <div class="about-section__text">
-            <p class="about-section__text__top">“We push each other to be the best. It’s not uncommon for one of us
-                to say 'this needs to be better,
-                back to the drawing board” </p>
-            <p class="about-section__text__bottom">- Lead vocalist of The Bees Knees</p>
+    <section class="about">
+        <h2 class="about__heading">About the Musicians</h2>
+        <img class="about__image" src="./assets/images/band.jpg" alt="The Bees Knees Band">
+        <div class="about__text">
+            <p class="about__text--top">“We push each other to be the best. It’s not uncommon for one of us
+                to say 'this needs to be better, back to the drawing board.” </p>
+            <p class="about__text--bottom">- Lead vocalist of The Bees Knees</p>
         </div>
-        <h3 class="about-section__subheading">The Bees Knees</h3>
-        <div class="about-section__content">
-            <p class="about-section__content__left">
+        <h3 class="about__subheading">The Bees Knees</h3>
+        <div class="about__content">
+            <p class="about__content--left">
                 The Bees Knees is a pop rock band originating from San Francisco, California. The band consists a
                 dynamic lineup featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a
                 drummer.
@@ -46,7 +50,7 @@
                 with
                 a well known record label.
             </p>
-            <p class="about-section__content__right">
+            <p class="about__content--right">
                 From there, the band has soared, gaining international recognition and ranking in the top 10 on the
                 Poster Charts. New fans immediately fell in love with the band’s original and organic attitude,
                 solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans
@@ -55,62 +59,92 @@
                 be released in early 2024.
             </p>
         </div>
-    </main>
-    
+    </section>
+
     <section class="photo">
         <h2 class="photo-title">Photo Gallery</h2>
         <div class="photo-gallery">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-1.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-2.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-3.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-4.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-5.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-6.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-7.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-8.jpg">
-            <img class="photo-gallery__img" src="./assets/images/Photo-gallery-9.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-1.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-2.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-3.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-4.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-5.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-6.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-7.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-8.jpg">
+            <img class="photo-gallery__image" src="./assets/images/Photo-gallery-9.jpg">
         </div>
     </section>
 
+
+    <main class="main">
+        <h2 class="main__title">Join the Conversation</h2>
+        <div class="main__form">
+            <form class="form">
+                <div class="form__avatar"></div>
+
+                <div class="form__content">
+                    <label class="form__label">NAME
+                        <input class="form__input" type="text" name="product" placeholder="Enter your name" required />
+                    </label>
+
+                    <label class="form__label">COMMENT
+                        <textarea class="form__textarea" name="productDescription" placeholder="Add a new comment"
+                            required></textarea>
+                    </label>
+
+                    <button class="form__button" type="submit">COMMENT</button>
+                </div>
+            </form>
+
+            <ul id="product-list" class="product-list"></ul>
+        </div>
+
+    </main>
+
+
     <footer class="footer">
-        <div class="footer-direction">
-            <div class="footer-left">
-                <div class="footer-props">
-                    <h2 class="footer-heading">Get in Touch</h2>
-                    <div class="footer-icons">
-                        <img class="footer-icons__img" src="./assets/icons/SVG/Icon-instagram.svg">
-                        <img class="footer-icons__img" src="./assets/icons/SVG/Icon-facebook.svg">
-                        <img class="footer-icons__img" src="./assets/icons/SVG/Icon-twitter.svg">
+        <div class="footer__direction">
+            <div class="footer__left">
+                <div class="footer__props">
+                    <h2 class="footer__heading">Get in Touch</h2>
+                    <div class="footer__icons">
+                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-instagram.svg">
+                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-facebook.svg">
+                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-twitter.svg">
                     </div>
                 </div>
-                <div class="footer-main">
-                    <div class="footer-text">
-                        <p class="footer-text__para footer-text__para__bold ">The Bees Knees Management</p>
-                        <p class="footer-text__para"> 503 Broadway Penthouse,</br>
+                <div class="footer__main">
+                    <div class="footer__text">
+                        <p class="footer__text-para footer__text-para--bold ">The Bees Knees Management</p>
+                        <p class="footer__text-para"> 503 Broadway Penthouse,</br>
                             New York, NY 10012, USA</p>
-                        <p class="footer-text__para"> info@thebeesknees.com</p>
+                        <p class="footer__text-para"> info@thebeesknees.com</p>
                     </div>
-                    <div class="footer-text">
-                        <p class="footer-text__para footer-text__para__bold">Limitless Artist Group</p>
-                        <p class="footer-text__para"> Booking Agent for</br>
+                    <div class="footer__text">
+                        <p class="footer__text-para footer__text-para--bold">Limitless Artist Group</p>
+                        <p class="footer__text-para"> Booking Agent for</br>
                             US / South America / Japan</p>
-                        <p class="footer-text__para"> bookings@limitlessag.com </p>
+                        <p class="footer__text-para"> bookings@limitlessag.com </p>
                     </div>
-                    <div class="footer-text">
-                        <p class="footer-text__para footer-text__para__bold"> ARCH Entertainment</p>
-                        <p class="footer-text__para"> Booking Agent for</br>
+                    <div class="footer__text">
+                        <p class="footer__text-para footer__text-para--bold"> ARCH Entertainment</p>
+                        <p class="footer__text-para"> Booking Agent for</br>
                             UK / EU / AU</p>
-                        <p class="footer-text__para"> bookings@archentertainment.com</p>
+                        <p class="footer__text-para"> bookings@archentertainment.com</p>
                     </div>
                 </div>
-                <img class="footer-logo" src="./assets/logo/Logo-bandsite.svg">
-                <p class="footer-label">Copyright The Bees Knees © 2023 All Rights Reserved</p>
+                <img class="footer__logo" src="../assets/logo/Logo-bandsite.svg">
+                <p class="footer__label">Copyright The Bees Knees © 2023 All Rights Reserved</p>
             </div>
             </section>
-            <div class="footer-right">
-                <img src="./assets/logo/Logo-bandsite.svg">
+            <div class="footer__right">
+                <img src="../assets/logo/Logo-bandsite.svg">
             </div>
         </div>
     </footer>
+
+    <script src="./script/index-page.js"></script>
 </body>
+
 </html>

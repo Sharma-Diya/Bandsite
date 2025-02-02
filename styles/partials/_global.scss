@@ -5,33 +5,38 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 html,
 body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
+  font-family: $font-family;
 }
-.header-nav {
-  background-color: $bandsite-black;
+
+.header__nav {
+  background-color: $primary-black;
   @include font(300);
   @include flex(column);
   align-items: center;
   padding-top: 1.25rem;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   @include tablet {
     flex-direction: row;
-    padding: 0 1.5rem 0 2.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
   }
-  &__logo {
-    margin-top: .5rem;
+  @include desktop {
+    padding: 1.5rem 6rem;
+  }
+
+  &-logo {
+    margin-top: 0.5rem;
     height: 1.25rem;
     width: 7.5rem;
   }
-  &__list {
-    display:flex;
+  &-list {
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding-top: 0.525rem;
@@ -40,21 +45,165 @@ body {
       margin-left: 3rem;
     }
   }
-  &__link {
-    padding:0 3rem;
-    padding-top:.25rem;
+  &-item {
+    list-style: none;
+    @include tablet {
+      padding: 0.2rem 1rem;
+    }
+  }
+  &-link {
+    
+    padding: 0 3rem;
+    padding-top: 0.25rem;
     font-size: 1rem;
     color: $mercury;
     text-decoration: none;
     text-align: center;
-    &:hover,
-    &:focus{
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
       color: $white;
       border-bottom: 0.1875rem solid $white;
     }
+    &--active{
+      color: $white;
+      border-bottom: 0.1875rem solid $white;
+    }
+
+    
     @include tablet {
-      margin:0 1rem;
+      margin: 0 1rem;
       padding: 1.75rem 0;
+    }
+  }
+}
+
+.footer {
+  color: $white;
+  background-color: #323232;
+  font-size: 0.8125rem;
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+  @include desktop {
+    padding: 3rem 6rem;
+  }
+  &__direction {
+    @include flex(row);
+    justify-content: space-between;
+    padding: 0.5rem;
+
+    @include tablet {
+      padding: 0 0.5rem;
+    }
+  }
+  &__props {
+    @include tablet {
+      @include flex(row);
+    }
+  }
+  &__heading {
+    padding: 0.65rem;
+    font-size: 1.5rem;
+    @include font(700);
+    @include tablet {
+      font-size: 2rem;
+      padding: 0;
+      margin-left: 0.5rem;
+    }
+    @include desktop {
+      margin: 0;
+    }
+  }
+  &__icons {
+    padding: 0.65rem;
+    @include flex(row);
+    @include tablet {
+      // padding: 0;
+      padding: 0 1rem;
+    }
+    @include desktop {
+      padding: 0 1rem;
+    }
+    &-img {
+      padding-right: 2rem;
+
+      @include tablet {
+        padding: 0.85rem;
+      }
+      @include desktop {
+        padding: 1rem 0 1rem 1.65rem;
+      }
+    }
+  }
+  &__main {
+    @include flex(column);
+    line-height: 1.25rem;
+    font-size: 0.8125rem;
+    @include font(400);
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+    }
+  }
+  &__text {
+    margin-right: 5rem;
+    font-size: 0.875rem;
+    @include tablet {
+      margin-right: 0;
+    }
+    @include desktop {
+    }
+    &-para {
+      padding: 0.65rem;
+      font-size: 0.8125rem;
+      @include tablet {
+        width: 13.7rem;
+        font-size: 0.875rem;
+      }
+      @include desktop {
+        font-size: 0.875rem;
+        padding: 1rem 0;
+      }
+      &--bold {
+        @include font(500);
+      }
+    }
+  }
+  &__logo {
+    padding:2rem 0.75rem 0.25rem 0.75rem;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__label {
+    padding: 0.5rem;
+    font-size: 0.6rem;
+
+    @include font(400);
+    @include tablet {
+      font-size: 0.8125rem;
+
+      padding: 2.5rem 0.5rem 0.5rem 0.5rem;
+    }
+    @include desktop {
+      padding: 2rem 0;
+    }
+  }
+  &__right {
+    display: none;
+
+    @include tablet {
+      width: 7.5rem;
+      height: 1.25rem;
+      position: relative;
+      @include flex(row);
+      right: 6.5rem;
+      top: 0.9rem;
+    }
+    @include desktop {
+      right: unset;
     }
   }
 }

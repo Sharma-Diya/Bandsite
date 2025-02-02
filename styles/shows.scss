@@ -1,0 +1,231 @@
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+@use "./partials/fonts" as *;
+@use "./partials/variable" as *;
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/images/hero-shows.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include desktop {
+    padding: 12rem 3rem;
+  }
+
+  &__body {
+    padding: 2rem 1rem;
+    @include tablet {
+      padding: 0 1rem 3rem 1rem;
+    }
+    @include desktop {
+      @include flex(row);
+      align-items: center;
+    }
+  }
+  &__text {
+    color: $white;
+    font-size: 1.125rem;
+    padding-top: 1rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      padding-top: 2rem;
+    }
+    @include desktop {
+      padding: 0;
+    }
+    &-top {
+      padding: 0.5rem 0;
+      @include font(400);
+      @include tablet {
+        font-size: 1.5rem;
+        padding: 1rem 8rem 0.7rem 2rem;
+      }
+      @include desktop {
+        padding: 1rem 3rem 1rem 0;
+      }
+    }
+    &-bottom {
+      @include font(700);
+      padding: 0.5rem 1rem 0.5rem 0rem;
+      @include tablet {
+        line-height: 2.75rem;
+        padding: 1rem 8rem 2rem 2rem;
+      }
+      @include desktop {
+        width: 31rem;
+        padding: 0 1rem 1rem 0;
+        font-family: Nunito Sans;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__track {
+    padding-top: 0.5rem;
+
+    @include tablet {
+      width: 50%;
+      padding-left: 2rem;
+    }
+    @include desktop {
+      width: 23rem;
+      padding-left: 0rem;
+      padding-top: 3rem;
+    }
+  }
+}
+
+.shows-section {
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.shows__heading {
+  @include font(700);
+  font-size: 2.25rem;
+  padding: 2rem 0 0 1rem;
+  color: $primary-black;
+
+  @include tablet {
+    padding: 3rem 0 0 3rem;
+  }
+  @include desktop {
+    padding-top: 4rem;
+  }
+}
+
+.show-title {
+  display: none;
+
+  @include tablet {
+    @include font(400);
+    color: $silver;
+    padding: 2rem 2rem 0 2rem;
+    font-size: 0.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    @include tablet {
+      display: inline;
+      width: 8.125rem;
+    }
+  }
+  &__venue {
+    @include tablet {
+      display: inline;
+      width: 7.5rem;
+    }
+  }
+  &__location {
+    @include tablet {
+      display: inline;
+      width: 7.5rem;
+    }
+  }
+  &__empty {
+    width: 9.375rem;
+  }
+}
+.show-list {
+  padding: 0 0 1rem 0;
+  list-style: none;
+  color: $primary-black;
+
+  @include tablet {
+    padding: 0 1rem 2rem 1rem;
+  }
+  @include desktop {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+
+    width: 75%;
+  }
+
+  &__item {
+    font-size: 0.875rem;
+    padding: 1rem;
+    font-family: $font-family;
+    border-bottom: 0.0625rem solid $mercury;
+    @include font(400);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: $alabaster;
+    }
+    &.selected {
+      background-color: $mercury;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+  }
+  &__date-section {
+    padding: 0.5rem 0;
+  }
+  &__venue-section {
+    padding: 0.5rem 0;
+  }
+  &__location-section {
+    padding: 0.5rem 0;
+  }
+  &__date-label {
+    font-size: 0.625rem;
+    color: $silver;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__venue-label {
+    font-size: 0.625rem;
+    color: $silver;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__location-label {
+    font-size: 0.625rem;
+    color: $silver;
+    @include tablet {
+      display: none;
+    }
+  } 
+  &__date {
+    width: 8.125rem;
+  }
+  &__venue {
+    width: 7.5rem;
+  }
+  &__location {
+    width: 7.5rem;
+  }
+  &__button {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    background-color: $primary-black;
+    color: $white;
+    border: none;
+    @include font(700);
+    font-size: 0.875rem;
+
+    @include tablet {
+      width: 9.375rem;
+    }
+  }
+}
