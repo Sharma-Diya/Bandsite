@@ -183,9 +183,11 @@
 
     &__image {
       width: $width;
-      padding: 0.7rem 0;
+      padding: 0.3rem 0;
       @include tablet {
         width: 30%;
+      padding: 0.7rem 0;
+
       }
     }
   }
