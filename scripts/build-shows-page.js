@@ -64,6 +64,7 @@ function showTitle() {
 }
 showTitle();
 
+
 for (let i = 0; i < shows.length; i++) {
     const showListItem = document.createElement("li");
     showListItem.classList.add("show-list__item");
