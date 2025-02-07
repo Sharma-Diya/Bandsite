@@ -12,7 +12,6 @@ export class BandSiteApi {
         comments.sort(function (a, b) {
             return b.timestamp - a.timestamp;
         });
-        // console.log(comments);
         return comments;
     };
 
@@ -24,14 +23,6 @@ export class BandSiteApi {
         return comments;
 
     }
-
-    // async deleteComment(commentId){
-    //     const response = await axios.delete(
-    //         this.baseUrl + "/comments/" + commentId + "?api_key=" + this.apiKey
-    //     );
-    //     const comments = response.data;
-    //     return comments;
-    // }
 
     async getShow() {
         const response = await axios.get(

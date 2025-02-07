@@ -72,10 +72,7 @@ async function showsDesc(){
     }
     document.querySelectorAll('.show-list__item').forEach(item => {
         item.addEventListener('click', function () {
-            // Remove 'selected' class from all items
             document.querySelectorAll('.show-list__item').forEach(i => i.classList.remove('selected'));
-    
-            // Add 'selected' class to the clicked item
             this.classList.add('selected');
         });
     });

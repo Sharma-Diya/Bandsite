@@ -50,23 +50,23 @@ async function getAllComments() {
         productDescription.classList.add("comment-list__description");
         rightDiv.appendChild(productDescription);
 
-        // const deleteButton = document.createElement("button");
-        // deleteButton.innerText = "DELETE";
-        // deleteButton.classList.add("form__button");
-        // rightDiv.appendChild(deleteButton);
+        const deleteButton = document.createElement("button");
+        deleteButton.innerText = "DELETE";
+        deleteButton.classList.add("form__button");
+        rightDiv.appendChild(deleteButton);
 
-        // deleteButton.addEventListener("click", async () => {
-        //     await bandsiteApi.deleteComment(comments[i].id);
-        //     productListItem.remove(); // Remove from DOM
-        // });
+        deleteButton.addEventListener("click", async () => {
+            await bandsiteApi.deleteComment(comments[i].id);
+            productListItem.remove(); 
+        });
         productList.appendChild(productListItem);
     }
 }
 productForm.addEventListener("submit", async function (event) {
     event.preventDefault();
     const newComment = {
-        name: event.target.product.value,
-        comment: event.target.productDescription.value,
+        name: event.target.name.value,
+        comment: event.target.comment.value,
     }
     await bandsiteApi.postComments(newComment);
     await getAllComments();

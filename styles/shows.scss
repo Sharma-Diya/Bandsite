@@ -147,7 +147,6 @@
 .show-list {
   list-style: none;
   color: $primary-black;
-  gap: 1rem;
   @include flex(column);
 
   @include tablet {
@@ -181,48 +180,24 @@
       padding: 1rem 2rem;
     }
   }
-  &__date-section {
+  &__date-section, &__venue-section, &__location-section {
     padding: 0.5rem 0;
+    flex: 1;
   }
-  &__venue-section {
-    padding: 0.5rem 0;
-  }
-  &__location-section {
-    padding: 0.5rem 0;
-  }
-  &__date-label {
+
+  &__date-label, &__venue-label,&__location-label {
     font-size: 0.625rem;
     color: $silver;
 
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__venue-label {
-    font-size: 0.625rem;
-    color: $silver;
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__location-label {
-    font-size: 0.625rem;
-    color: $silver;
     @include tablet {
       display: none;
     }
   } 
-  &__date {
-    width: 8.125rem;
+  &__date, &__venue, &__location {
+    flex:1;
+    display: inline-block;
   }
-  &__venue {
-    width: 7.5rem;
-  }
-  &__location {
-    width: 7.5rem;
-  }
+ 
   &__button {
     height: 2.5rem;
     width: 100%;
