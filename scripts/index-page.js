@@ -50,15 +50,6 @@ async function getAllComments() {
         productDescription.classList.add("comment-list__description");
         rightDiv.appendChild(productDescription);
 
-        const deleteButton = document.createElement("button");
-        deleteButton.innerText = "DELETE";
-        deleteButton.classList.add("form__button");
-        rightDiv.appendChild(deleteButton);
-
-        deleteButton.addEventListener("click", async () => {
-            await bandsiteApi.deleteComment(comments[i].id);
-            productListItem.remove(); 
-        });
         productList.appendChild(productListItem);
     }
 }
