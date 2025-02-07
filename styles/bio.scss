@@ -232,7 +232,7 @@
     border-radius: 50%;
     margin-top: 0.8rem;
     margin-left: 0.5rem;
-    background-image: url(/assets/images/Mohan-muruge.jpg);
+    background-image: url(/assets/images/mohan-muruge.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -261,7 +261,7 @@
   }
 
   &__input {
-    padding: 0.625rem;
+    padding: 1.625rem;
     width: $width;
     height: 2.25rem;
     border-radius: 0.25rem;
@@ -315,14 +315,15 @@
   }
 }
 
-.product-comments {
-  @include flex(column);
+// .product-comments {
+//   @include flex(column);
 
-  @include tablet {
-    padding: 1rem 4rem;
-  }
-}
-.product-list {
+//   @include tablet {
+//     padding: 1rem 4rem;
+//   }
+// }
+
+.comment-list {
   list-style: none;
   @include flex(column);
   margin-bottom: 1.5rem;
@@ -344,7 +345,7 @@
     display: flex;
   }
 
-  &__left {
+  &__image-wrapper {
     padding-right: 1rem;
   }
 
@@ -355,7 +356,7 @@
     background-color: $mercury;
   }
 
-  &__right {
+  &__comment-wrapper {
     @include flex(column);
     flex: 1;
   }

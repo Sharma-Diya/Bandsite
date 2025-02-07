@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <nav class="header__nav">
-            <a href="/index.html"><img class="header__nav-logo" src="../assets/logo/Logo-bandsite.svg"></a>
+            <a href="/index.html"><img class="header__nav-logo" src="../assets/logo/Logo-bandsite.svg" alt="Bandsite Logo"></a>
             <ul class="header__nav-list">
                 <li class="header__nav-item">
                     <a class="header__nav-link" href="../index.html">Biography</a>
@@ -30,9 +30,7 @@
                 <h2 class="hero__text-bottom">Stripes of Yellow x For The Stings</h2>
             </div>
             <div class="hero__track">
-                <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1727196540&amp;{ ADD YOUR PARAMETERS HERE }">
-                </iframe>
+                <iframe class="hero__iframe" height="120" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1727196540"></iframe>
             </div>
         </div>
     </section>
@@ -51,42 +49,42 @@
                 <div class="footer__props">
                     <h2 class="footer__heading">Get in Touch</h2>
                     <div class="footer__icons">
-                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-instagram.svg">
-                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-facebook.svg">
-                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-twitter.svg">
+                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-instagram.svg" alt="Instagram">
+                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-facebook.svg" alt="Facebook">
+                        <img class="footer__icons-img" src="../assets/icons/SVG/Icon-twitter.svg" alt="Twitter">
                     </div>
                 </div>
                 <div class="footer__main">
                     <div class="footer__text">
                         <p class="footer__text-para footer__text-para--bold ">The Bees Knees Management</p>
-                        <p class="footer__text-para"> 503 Broadway Penthouse,</br>
+                        <p class="footer__text-para"> 503 Broadway Penthouse,<br>
                             New York, NY 10012, USA</p>
                         <p class="footer__text-para"> info@thebeesknees.com</p>
                     </div>
                     <div class="footer__text">
                         <p class="footer__text-para footer__text-para--bold">Limitless Artist Group</p>
-                        <p class="footer__text-para"> Booking Agent for</br>
+                        <p class="footer__text-para"> Booking Agent for<br>
                             US / South America / Japan</p>
                         <p class="footer__text-para"> bookings@limitlessag.com </p>
                     </div>
                     <div class="footer__text">
                         <p class="footer__text-para footer__text-para--bold"> ARCH Entertainment</p>
-                        <p class="footer__text-para"> Booking Agent for</br>
+                        <p class="footer__text-para"> Booking Agent for<br>
                             UK / EU / AU</p>
                         <p class="footer__text-para"> bookings@archentertainment.com</p>
                     </div>
                 </div>
-                <img class="footer__logo" src="../assets/logo/Logo-bandsite.svg">
+                <img class="footer__logo" src="../assets/logo/Logo-bandsite.svg" alt="Bandsite Logo">
                 <p class="footer__label">Copyright The Bees Knees © 2023 All Rights Reserved</p>
             </div>
-            </section>
             <div class="footer__right">
-                <img src="../assets/logo/Logo-bandsite.svg">
+                <img src="../assets/logo/Logo-bandsite.svg" alt="Bandsite Logo">
             </div>
         </div>
     </footer>
-
-    <script src="../scripts/build-shows-page.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/build-shows-page.js"></script>
 </body>
 
 </html>
