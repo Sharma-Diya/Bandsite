@@ -1,21 +1,21 @@
 import { BandSiteApi } from './band-site-api.js';
 
-const productForm = document.querySelector(".form");
+const commentForm = document.querySelector(".form");
 const apiKey = "9f3187be-cf12-43b4-89d1-cfdc2094e8cb";
 const bandsiteApi = new BandSiteApi(apiKey);
-const productList = document.querySelector(".comment-list"); 
+const commentList = document.querySelector(".comment-list"); 
 
 async function getAllComments() {
     const comments = await bandsiteApi.getComments();
-    productList.innerHTML = "";
+    commentList.innerHTML = "";
 
     for (let i = 0; i < comments.length; i++) {
-        const productListItem = document.createElement("li");
-        productListItem.classList.add("comment-list__item");
+        const commentListItem = document.createElement("li");
+        commentListItem.classList.add("comment-list__item");
 
         const leftDiv = document.createElement("div");
         leftDiv.classList.add("comment-list__image-wrapper");
-        productListItem.appendChild(leftDiv);
+        commentListItem.appendChild(leftDiv);
 
         const userImage = document.createElement("div");
         userImage.src = comments[i].image;
@@ -24,36 +24,36 @@ async function getAllComments() {
 
         const rightDiv = document.createElement("div");
         rightDiv.classList.add("comment-list__comment-wrapper");
-        productListItem.appendChild(rightDiv);
+        commentListItem.appendChild(rightDiv);
 
         const topDiv = document.createElement("div");
         topDiv.classList.add("comment-list__top");
         rightDiv.appendChild(topDiv);
 
-        const productName = document.createElement("h2");
-        productName.innerText = comments[i].name;
-        productName.classList.add("comment-list__name");
-        topDiv.appendChild(productName);
+        const commentName = document.createElement("h2");
+        commentName.innerText = comments[i].name;
+        commentName.classList.add("comment-list__name");
+        topDiv.appendChild(commentName);
 
-        const productPosted = document.createElement("p");
+        const commentPosted = document.createElement("p");
         const date = new Date(comments[i].timestamp);
-        productPosted.innerText = date.toLocaleDateString("en-US", {
+        commentPosted.innerText = date.toLocaleDateString("en-US", {
             month: "2-digit",
             day: "2-digit",
             year: "numeric"
         });
-        productPosted.classList.add("comment-list__posted");
-        topDiv.appendChild(productPosted);
+        commentPosted.classList.add("comment-list__posted");
+        topDiv.appendChild(commentPosted);
 
-        const productDescription = document.createElement("p");
-        productDescription.innerText = comments[i].comment;
-        productDescription.classList.add("comment-list__description");
-        rightDiv.appendChild(productDescription);
+        const commentDescription = document.createElement("p");
+        commentDescription.innerText = comments[i].comment;
+        commentDescription.classList.add("comment-list__description");
+        rightDiv.appendChild(commentDescription);
 
-        productList.appendChild(productListItem);
+        commentList.appendChild(commentListItem);
     }
 }
-productForm.addEventListener("submit", async function (event) {
+commentForm.addEventListener("submit", async function (event) {
     event.preventDefault();
     const newComment = {
         name: event.target.name.value,

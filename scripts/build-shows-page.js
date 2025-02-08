@@ -5,7 +5,7 @@ const bandsiteApi = new BandSiteApi(apiKey);
 const showList = document.querySelector(".show-list");
 
 async function showsDesc(){
-    const shows = await bandsiteApi.getShow();
+    const shows = await bandsiteApi.getShows();
     
     for (let i = 0; i < shows.length; i++) {
         const showListItem = document.createElement("li");

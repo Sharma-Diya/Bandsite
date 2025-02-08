@@ -102,10 +102,11 @@
   color: $primary-black;
 
   @include tablet {
-    padding: 3rem 0 0 3rem;
+    font-size: 2.5rem;
+    padding: 2.5rem 0 0 2.5rem;
   }
   @include desktop {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 }
 
@@ -115,7 +116,7 @@
   @include tablet {
     @include font(400);
     color: $silver;
-    padding: 2rem 2rem 0 2rem;
+    padding: 1.5rem 2rem 1rem 2rem;
     font-size: 0.625rem;
     display: flex;
     justify-content: space-between;
@@ -144,6 +145,7 @@
     width: 9.375rem;
   }
 }
+
 .show-list {
   list-style: none;
   color: $primary-black;
